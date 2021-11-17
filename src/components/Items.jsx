@@ -5,9 +5,11 @@ function Items({ items }) {
     <ul>
       {items.length > 0 &&
         items
-          .filter((b, i) => i > 1)
+          // .filter((b, i) => i > 1)
           .reverse()
-          .map(({ id, name }) => <Item key={id} id={id} name={name} />)}
+          .map(({ id, name, isNew }) => (
+            <Item key={id} id={id} name={name} isNew={isNew} />
+          ))}
     </ul>
   );
 }

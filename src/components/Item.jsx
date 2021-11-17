@@ -1,7 +1,7 @@
-function Item({ id, name }) {
+function Item({ id, name, isNew }) {
   return (
     <li>
-      {name} ({id})
+      {name} ({id}) {isNew && "(NEW)"}
     </li>
   );
 }
