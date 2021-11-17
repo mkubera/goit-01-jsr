@@ -8,9 +8,11 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Title color="blue" title={"Hello"} subtitle={"World"} />
+        <Title color="blue" title={"Hello"} subtitle={"World"}>
+          Text...
+        </Title>
         <Title title={"hI"} subtitle={"THERE"} />
-        <Title title={"I am"} subtitle={"here"} />
+        <Title title={"I am"} subtitle={3} />
 
         <img src={logo} className="App-logo" alt="logo" />
         <p style={{ color: "blue", marginLeft: "20px" }}>
