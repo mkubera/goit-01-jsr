@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
-import Items from "./components/Items";
+import Items from "./components/items/Items";
+import Button from "./components/button/Button";
 
 // JSX
 const App = () => {
@@ -17,6 +18,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Button label={"click me"} disabled={true} />
+        <Button label={"click me"} disabled={!true} />
+
         <Items items={books} />
 
         <Title color="blue" title={"Hello"} subtitle={"World"}>
