@@ -20,21 +20,28 @@ class Counter extends Component {
   };
 
   // UPDATE
-  handleIncrement = (e) => {
+  // changeCount
+  // arg: action === "incr" | "decr"
+  changeCount = (action = "incr") => {
     this.setState((state, props) => ({
       ...state,
-      count: state.count + props.step,
+      count:
+        action === "incr" ? state.count + props.step : state.count - props.step, // TODO: turn into a pseudo-switch
     }));
   };
+  // handleIncrement = (e) => {
+  //   this.setState((state, props) => ({
+  //     ...state,
+  //     count: state.count + props.step,
+  //   }));
+  // };
 
-  handleDecrement = (e) => {
-    this.setState((state, props) => ({
-      ...state,
-      count: state.count - props.step,
-    }));
-
-    // this.setState({count: this.state.count - this.props.step})
-  };
+  // handleDecrement = (e) => {
+  //   this.setState((state, props) => ({
+  //     ...state,
+  //     count: state.count - props.step,
+  //   }));
+  // };
 
   //  VIEW
   render() {
@@ -44,7 +51,7 @@ class Counter extends Component {
     return (
       <div>
         <p>
-          <button type="button" onClick={this.handleIncrement}>
+          <button type="button" onClick={(e) => this.changeCount("incr")}>
             +{step}
           </button>
         </p>
@@ -52,7 +59,7 @@ class Counter extends Component {
           <span>{count}</span>
         </p>
         <p>
-          <button type="button" onClick={this.handleDecrement}>
+          <button type="button" onClick={(e) => this.changeCount("decr")}>
             -{step}
           </button>
         </p>
