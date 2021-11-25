@@ -3,6 +3,7 @@ import "./App.css";
 import Title from "./components/Title";
 import Items from "./components/items/Items";
 import Button from "./components/button/Button";
+import Counter from "./components/counter/Counter";
 
 // JSX
 const App = () => {
@@ -15,11 +16,23 @@ const App = () => {
     { id: "id-4", name: "Redux in depth", isNew: false },
   ];
 
+  const sendEventData = (e) => console.log(e.target);
+
   return (
     <div className="App">
       <header className="App-header">
-        <Button label={"click me"} disabled={true} />
-        <Button label={"click me"} disabled={!true} />
+        <Counter step={5} initCount={0} />
+
+        <Button
+          label={"click me"}
+          disabled={true}
+          sendEventData={sendEventData}
+        />
+        <Button
+          label={"click me"}
+          disabled={!true}
+          sendEventData={sendEventData}
+        />
 
         <Items items={books} />
 
@@ -27,7 +40,7 @@ const App = () => {
           Text...
         </Title>
         <Title title={"hI"} subtitle={"THERE"} />
-        <Title title={"I am"} subtitle={3} />
+        <Title title={"I am"} subtitle={"Coocoo"} />
 
         <img src={logo} className="App-logo" alt="logo" />
         <p style={{ color: "blue", marginLeft: "20px" }}>
