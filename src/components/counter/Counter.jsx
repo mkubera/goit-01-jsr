@@ -29,19 +29,6 @@ class Counter extends Component {
         action === "incr" ? state.count + props.step : state.count - props.step, // TODO: turn into a pseudo-switch
     }));
   };
-  // handleIncrement = (e) => {
-  //   this.setState((state, props) => ({
-  //     ...state,
-  //     count: state.count + props.step,
-  //   }));
-  // };
-
-  // handleDecrement = (e) => {
-  //   this.setState((state, props) => ({
-  //     ...state,
-  //     count: state.count - props.step,
-  //   }));
-  // };
 
   //  VIEW
   render() {
@@ -69,17 +56,3 @@ class Counter extends Component {
 }
 
 export default Counter;
-
-// class Counter extends Component {
-//
-
-//   render() {
-//
-
-//     return (
-//       <div>
-//         <
-//       </div>
-//     );
-//   }
-// }
