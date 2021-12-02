@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import Items from "./components/items/Items";
 import Button from "./components/button/Button";
 import Counter from "./components/counter/Counter";
+import TextInput from "./components/form/TextInput";
 
 // JSX
 const App = () => {
@@ -18,10 +19,14 @@ const App = () => {
 
   const sendEventData = (e) => console.log(e.target);
 
+  const counterProps = { step: 5, initCount: 0 };
+
   return (
     <div className="App">
       <header className="App-header">
-        <Counter step={5} initCount={0} />
+        <TextInput />
+        <Counter {...counterProps} />
+        {/* <Counter step={5} initCount={0} /> */}
 
         <Button
           label={"click me"}
