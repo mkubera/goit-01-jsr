@@ -6,6 +6,8 @@ import Button from "./components/button/Button";
 import Counter from "./components/counter/Counter";
 import TextInput from "./components/form/TextInput";
 import Joke from "./components/joke/Joke";
+import JokeHooks from "./components/joke/JokeHooks";
+import Cartoons2D from "./components/cartoons/Cartoons2D";
 
 // JSX
 const App = () => {
@@ -25,7 +27,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Joke />
+        <Cartoons2D />
+        <JokeHooks />
+        {/* <Joke /> */}
         <TextInput />
         <Counter {...counterProps} />
         {/* <Counter step={5} initCount={0} /> */}
