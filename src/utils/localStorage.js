@@ -1,5 +1,5 @@
 const addNewJokeToLocalStorage = (newJoke) => {
-  const oldLocalStoreJokes = localStorage.getItem("jokes") || [];
+  const oldLocalStoreJokes = JSON.parse(localStorage.getItem("jokes")) || [];
   const newLocalStoreJokes = [...oldLocalStoreJokes, newJoke];
   const stringifiedNewJokes = JSON.stringify(newLocalStoreJokes);
   localStorage.setItem("jokes", stringifiedNewJokes);
