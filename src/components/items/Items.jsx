@@ -1,9 +1,9 @@
 import Item from "./Item";
 import React, { useContext } from "react";
-import { BooksContext } from "./../../utils/provider";
+import { AppContext } from "./../../utils/provider";
 
 const Items = () => {
-  const books = useContext(BooksContext).books;
+  const books = useContext(AppContext).books;
 
   return (
     <ul>

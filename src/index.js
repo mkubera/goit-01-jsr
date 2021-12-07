@@ -8,7 +8,7 @@ import { books } from "./utils/data";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext.Provider value={{ books }}>
+    <AppContext.Provider value={{ books, appTitle: "App Title" }}>
       <App />
     </AppContext.Provider>
   </React.StrictMode>,

@@ -20,6 +20,8 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Title title={"I am"} subtitle={"Coocoo"} />
+
         <Items />
 
         <Cartoons2D />
