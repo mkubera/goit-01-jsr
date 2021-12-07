@@ -13,13 +13,6 @@ import Cartoons2D from "./components/cartoons/Cartoons2D";
 const App = () => {
   const sum = 2 + 2;
 
-  const books = [
-    { id: "id-1", name: "JS for beginners", isNew: true },
-    { id: "id-2", name: "React basics", isNew: false },
-    { id: "id-3", name: "React Router overview", isNew: false },
-    { id: "id-4", name: "Redux in depth", isNew: false },
-  ];
-
   const sendEventData = (e) => console.log(e.target);
 
   const counterProps = { step: 5, initCount: 0 };
@@ -27,6 +20,8 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Items />
+
         <Cartoons2D />
         <JokeHooks />
         {/* <Joke /> */}
@@ -44,8 +39,6 @@ const App = () => {
           disabled={!true}
           sendEventData={sendEventData}
         />
-
-        <Items items={books} />
 
         <Title color="blue" title={"Hello"} subtitle={"World"}>
           Text...
