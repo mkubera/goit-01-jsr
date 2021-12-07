@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { addNewJokeToLocalStorage } from "./../../utils/localStorage.js";
+// import { addNewJokeToLocalStorage } from "./../../utils/localStorage.js";
 
 const JokeHooks = () => {
   const [joke, setJoke] = useState("");
