@@ -1,24 +1,24 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
-import Items from "./components/items/Items";
-import Button from "./components/button/Button";
-import Counter from "./components/counter/Counter";
-import TextInput from "./components/form/TextInput";
-import Joke from "./components/joke/Joke";
-import JokeHooks from "./components/joke/JokeHooks";
-import Cartoons2D from "./components/cartoons/Cartoons2D";
+// import Items from "./components/items/Items";
+// import Button from "./components/button/Button";
+// import Counter from "./components/counter/Counter";
+// import TextInput from "./components/form/TextInput";
+// import Joke from "./components/joke/Joke";
+// import JokeHooks from "./components/joke/JokeHooks";
+// import Cartoons2D from "./components/cartoons/Cartoons2D";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import MoviePage from "./pages/MoviePage";
 
 // JSX
 const App = () => {
-  const sum = 2 + 2;
+  // const sum = 2 + 2;
 
-  const sendEventData = (e) => console.log(e.target);
+  // const sendEventData = (e) => console.log(e.target);
 
-  const counterProps = { step: 5, initCount: 0 };
+  // const counterProps = { step: 5, initCount: 0 };
 
   return (
     <div className="App">
