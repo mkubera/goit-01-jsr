@@ -5,11 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AppContext } from "./utils/provider";
 import { books } from "./utils/data";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <AppContext.Provider value={{ books, appTitle: "App Title" }}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </AppContext.Provider>
   </React.StrictMode>,
   document.getElementById("root")
